@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Zero</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+      .water{
+          width:400px;
+          height: 400px;
+          background-color: skyblue;
+          border-radius: 50%;
+          position: relative;
+          box-shadow: inset 0 0 30px 0 rgba(0,0,0,.5), 0 4px 10px 0 rgba(0,0,0,.5);
+          overflow: hidden;
+      }
+      .water:before, .water:after{
+          content:'';
+          position: absolute;
+          width:400px;
+          height: 400px;
+          top:-150px;
+          background-color: #fff;
+      }
+      .water:before{
+          border-radius: 45%;
+          background:rgba(255,255,255,.7);
+          animation:wave 5s linear infinite;
+      }
+      .water:after{
+          border-radius: 35%;
+          background:rgba(255,255,255,.3);
+          animation:wave 5s linear infinite;
+      }
+      @keyframes wave{
+          0%{
+              transform: rotate(0);
+          }
+          100%{
+              transform: rotate(360deg);
+          }
+      }
+  </style>
+</head>
+<body>
+  <div id="root"><div class="water"></div></div>
+</body>
+</html>
